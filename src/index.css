@@ -1,4 +1,4 @@
-:root
+/* :root
 {
     --body_bg : white;
     --body_clr : black;
@@ -10,7 +10,28 @@
     --body_bg : #282c34;
     --body_clr : white;
     --link_clr : cyan;
-}
+} */
+:root {
+    --body_bg: #ffffff;
+    --body_clr: #000000;
+    --link_clr : navy;
+    --nav-bg: #f8f9fa;
+    --card-bg: #ffffff;
+  }
+  
+  .dark-theme {
+    --body_bg: #1a1a1a;
+    --body_clr: #ffffff;
+    --link_clr : cyan;
+    --nav-bg: #2d2d2d;
+    --card-bg: #333333;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
 
 @import "tailwindcss";
 
