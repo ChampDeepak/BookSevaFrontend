@@ -19,7 +19,7 @@ const FlippingCard = ({ imagePath, jobRole }) => {
           transform: isHovered ? 'rotateY(180deg)' : 'rotateY(0deg)',
         }}
       >
-        {/* Front Side */}
+        
         <div
           className="absolute w-full h-full rounded-xl shadow-lg overflow-hidden"
           style={{
@@ -47,7 +47,7 @@ const FlippingCard = ({ imagePath, jobRole }) => {
           </div>
         </div>
 
-        {/* Back Side */}
+        
         <div
           className="absolute w-full h-full flex items-center justify-center text-xl font-semibold rounded-xl shadow-lg"
           style={{

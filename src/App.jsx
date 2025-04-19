@@ -1,3 +1,4 @@
+import Features from './Components/Features'
 import HeroSection from './Components/HeroSection'
 import LightHeaderD from './Components/LightHeaderD'
 import Team from './Components/Team'
@@ -9,6 +10,7 @@ function App() {
       <LightHeaderD/>
       <HeroSection/>
       <Team/>
+      <Features/>
     </ThemeProvider>
   )
 }

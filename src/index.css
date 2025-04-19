@@ -13,11 +13,12 @@
     --nav-bg: #2d2d2d;
     --card-bg: #333333;
   }
-  
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
   body {
     background-color: var(--background-color);
     color: var(--text-color);
-    transition: all 0.3s ease;
   }
 
 @import "tailwindcss";
