@@ -8,7 +8,7 @@ function LightHeaderD() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[var(--nav-bg)] text-[var(--body_clr)] shadow-md sticky top-0 z-50">
+    <header className="bg-[var(--body_bg)] text-[var(--body_clr)] shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to='/' className="flex items-center gap-2 text-indigo-600 font-bold text-2xl tracking-tight">

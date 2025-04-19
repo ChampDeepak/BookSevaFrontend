@@ -8,7 +8,7 @@ function Footer() {
     <footer 
       className="body-font transition-colors duration-300"
       style={{
-        backgroundColor: 'var(--nav-bg)',
+        backgroundColor: 'var(--body_bg)',
         color: 'var(--body_clr)'
       }}
     >
