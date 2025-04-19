@@ -1,8 +1,14 @@
-import React from 'react'
+
+import LightHeaderD from './Components/LightHeaderD'
+
+
 
 function App() {
   return (
-    <div>App</div>
+    <>
+      <LightHeaderD/>
+     
+    </>
   )
 }
 
