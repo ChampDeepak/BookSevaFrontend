@@ -3,35 +3,33 @@ import heroImg from '../../public/heroImg.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="bg-white py-24 h-[80vh]">
-      <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-16">
-        {/* Text Content */}
+    <section className="bg-[var(--body_bg)] py-16 sm:py-20 md:py-24 text-[var(--body_clr)]">
+      <div className="container mx-auto px-4 sm:px-6 flex flex-col-reverse lg:flex-row items-center gap-10 sm:gap-16">
+        
         <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-gray-900 mb-6">
-            Fix It, Build It, Spark It –
-            <br />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 sm:mb-6">
+            Fix It, Build It, Spark It –<br />
             <span className="text-indigo-600">Your Home’s Best Friend</span> Is Here!
           </h1>
-          <p className="text-lg text-gray-700 mb-8">
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 text-[var(--body_clr)] opacity-90">
             Connect with trusted plumbers, electricians, carpenters, and more – all at your fingertips.
             Fast, reliable, and tailored for urban India!
           </p>
-          <div className="flex justify-center lg:justify-start gap-4">
-            <button className="bg-indigo-600 hover:bg-indigo-700 transition-colors text-white px-6 py-3 rounded-xl text-lg shadow-md">
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <button className="bg-indigo-600 hover:bg-indigo-700 transition-colors text-white px-6 py-3 rounded-xl text-base sm:text-lg shadow-md">
               Make an Appointment
             </button>
-            <button className="bg-gray-100 hover:bg-gray-200 transition-colors text-gray-800 px-6 py-3 rounded-xl text-lg shadow-md">
+            <button className="bg-[var(--card-bg)] hover:brightness-110 transition-colors text-[var(--body_clr)] px-6 py-3 rounded-xl text-base sm:text-lg shadow-md">
               Write an Email
             </button>
           </div>
         </div>
 
-        {/* Image */}
-        <div className="lg:w-1/2 w-full">
+        <div className="lg:w-1/2 w-full max-h-[300px] sm:max-h-[400px] overflow-hidden rounded-2xl shadow-xl">
           <img
             src={heroImg}
             alt="Hero Visual"
-            className="w-full rounded-2xl shadow-xl object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
