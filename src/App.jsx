@@ -1,4 +1,6 @@
+import Cta from './Components/Cta'
 import Features from './Components/Features'
+import Footer from './Components/Footer'
 import HeroSection from './Components/HeroSection'
 import LightHeaderD from './Components/LightHeaderD'
 import Team from './Components/Team'
@@ -11,6 +13,8 @@ function App() {
       <HeroSection/>
       <Team/>
       <Features/>
+      <Cta/>
+      <Footer/>
     </ThemeProvider>
   )
 }
