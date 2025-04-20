@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTheme } from "../Context/ThemeContext";
 
 function Cta() {
@@ -24,7 +25,7 @@ function Cta() {
             </h1>
           </div>
           
-          {/* Button */}
+          <Link to="/Services">
           <button
             className="whitespace-nowrap px-8 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
             style={{
@@ -36,6 +37,8 @@ function Cta() {
           >
             Book Now
           </button>
+          </Link>
+          
         </div>
       </div>
     </section>

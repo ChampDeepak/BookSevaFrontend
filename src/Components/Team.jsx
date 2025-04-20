@@ -1,9 +1,9 @@
-import homeTutor from "../../public/homeTutor.jpg";
-import hospitalLab from "../../public/hospitalLab.jpg";
-import mechanic from "../../public/mechanic.jpg";
-import nurse from "../../public/nurse.jpg";
-import physioTherapist from "../../public/physioTherapist.jpg";
-import plumber from "../../public/plumber.jpg";
+import homeTutor from "../Assets/homeTutor.jpg";
+import hospitalLab from "../Assets/hospitalLab.jpg";
+import mechanic from "../Assets/mechanic.jpg";
+import nurse from "../Assets/nurse.jpg";
+import physioTherapist from "../Assets/physioTherapist.jpg";
+import plumber from "../Assets/plumber.jpg";
 import FlippingCard from "./FlippingCard";
 
 function Team() {

@@ -26,9 +26,9 @@ function LightHeaderD() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8 text-[var(--body_clr)] font-medium">
+          <Link to="/" className="hover:text-[var(--link_clr)] transition-colors">Home</Link>
           <Link to="/Services" className="hover:text-[var(--link_clr)] transition-colors">Services</Link>
           <Link to="/About" className="hover:text-[var(--link_clr)] transition-colors">About</Link>
-          <Link to="/Blog" className="hover:text-[var(--link_clr)] transition-colors">Blog</Link>
           <Link to="/Contact" className="hover:text-[var(--link_clr)] transition-colors">Contact</Link>
         </nav>
 

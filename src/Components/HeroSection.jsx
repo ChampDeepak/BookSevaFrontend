@@ -1,5 +1,6 @@
 import React from 'react';
-import heroImg from '../../public/heroImg.jpg';
+import heroImg from '../Assets/heroImg.jpg';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -16,9 +17,12 @@ const HeroSection = () => {
             Fast, reliable, and tailored for urban India!
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <Link to="/Services">
             <button className="bg-indigo-600 hover:bg-indigo-700 transition-colors text-white px-6 py-3 rounded-xl text-base sm:text-lg shadow-md">
               Make an Appointment
             </button>
+            </Link>
+            
             <button className="bg-[var(--card-bg)] hover:brightness-110 transition-colors text-[var(--body_clr)] px-6 py-3 rounded-xl text-base sm:text-lg shadow-md">
               Write an Email
             </button>

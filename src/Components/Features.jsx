@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "../Context/ThemeContext";
-import featureImg from "../../public/features.jpg"
+import featureImg from "../Assets/features.jpg"
 
 function Features() {
   const { isDarkTheme } = useTheme();

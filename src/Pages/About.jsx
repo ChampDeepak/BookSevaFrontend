@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from "../Context/ThemeContext";
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const { isDarkTheme } = useTheme();
@@ -65,7 +66,7 @@ const About = () => {
     </div>
   ))}
 </div>
-
+        <Link to="/Services">
         <button 
           className="mt-8 font-semibold py-3 px-6 rounded-2xl shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
           style={{
@@ -76,7 +77,7 @@ const About = () => {
         >
           Book Now
         </button>
-        
+        </Link>
       </div>
       
     </section>
