@@ -52,6 +52,19 @@ const About = () => {
            Unlock the simplicity of booking top-notch services with just a few clicks. Your comfort and convenience are our top priority—guaranteed every time!
           </p>
         </div>
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+  {[
+    { number: "500+", label: "Professionals" },
+    { number: "10K+", label: "Services" },
+    { number: "98%", label: "Satisfaction" },
+    { number: "24/7", label: "Support" }
+  ].map((stat, index) => (
+    <div key={index} className="p-4">
+      <p className="text-3xl font-bold" style={{ color: 'var(--link_clr)' }}>{stat.number}</p>
+      <p className="mt-2" style={{ color: 'var(--body_clr)' }}>{stat.label}</p>
+    </div>
+  ))}
+</div>
 
         <button 
           className="mt-8 font-semibold py-3 px-6 rounded-2xl shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
@@ -63,7 +76,9 @@ const About = () => {
         >
           Book Now
         </button>
+        
       </div>
+      
     </section>
   );
 };
