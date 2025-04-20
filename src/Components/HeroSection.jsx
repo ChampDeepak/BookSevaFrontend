@@ -23,9 +23,11 @@ const HeroSection = () => {
             </button>
             </Link>
             
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=deepak.24bcs10067@sst.scaler.com&su=Appointment-Support` } target="_blank">
             <button className="bg-[var(--card-bg)] hover:brightness-110 transition-colors text-[var(--body_clr)] px-6 py-3 rounded-xl text-base sm:text-lg shadow-md">
               Write an Email
             </button>
+            </a>
           </div>
         </div>
 

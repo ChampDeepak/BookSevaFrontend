@@ -1,7 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import { useTheme } from "../Context/ThemeContext";
 const ServiceCard = ({ id, image, title, description }) => {
   const { isDarkTheme } = useTheme();
+  const navigate = useNavigate();
+  const htmlBody = `
+      Dear Service Team,
 
+      📅 Appointment Request Details:
+
+      • Full Name: ___________________________
+      • Contact Number:______________________
+      • Address:_________________________
+
+      • Preferred Appointment Time:_______________________________
+
+      • Service Required:
+      _______________ ${title} _______________`;
+  const handleBookNow = () => {
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=deepak.24bcs10067@sst.scaler.com&su=${encodeURIComponent(title)}&body=${encodeURIComponent(htmlBody)}`);
+    navigate("/ConfirmationPage");
+  };
   return (
     <div 
       className="rounded-lg shadow-md "
@@ -38,17 +56,16 @@ const ServiceCard = ({ id, image, title, description }) => {
         >
           {description}
         </p>
-
-        <button 
+        
+      <button 
           className="w-full py-2 px-4 rounded-md transition-all duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2"
+          onClick={handleBookNow}
           style={{
-            backgroundColor: 'var(--link_clr)',
-            color: 'var(--body_bg)',
-            minHeight: '40px'
-          }}
-        >
-          Book Now
-        </button>
+          backgroundColor: 'var(--link_clr)',
+          color: 'var(--body_bg)',
+          minHeight: '40px'}}>
+      Book Now
+    </button>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ import { ThemeProvider } from './Context/ThemeContext'
 import { BrowserRouter,Routes ,Route} from 'react-router-dom'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
-import Blog from './Pages/Blog'
+import ConfirmationPage from './Pages/ConfirmationPage'
 import Services from './Pages/Services'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Routes>
               <Route path='/' element={<><HeroSection/> <Team/> <Features/> <Cta/></>}></Route>
               <Route path='/About' element={<About/>} ></Route>
-              <Route path='/Blog' element={<Blog/>}></Route>
+              <Route path='/ConfirmationPage' element={<ConfirmationPage/>}></Route>
               <Route path='/Contact' element={<Contact/>}></Route>
               <Route path='/Services' element={<Services/>}></Route>
           </Routes>

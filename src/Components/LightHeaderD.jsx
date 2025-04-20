@@ -42,16 +42,17 @@ function LightHeaderD() {
               borderRadius: '0.5rem',
               border: 'none',
               cursor: 'pointer',
-              backgroundColor: isDarkTheme ? '#ffffff' : '#2d2d2d',
-              color: isDarkTheme ? '#000000' : '#ffffff'
+              backgroundColor: isDarkTheme ? '#2d2d2d' : '#ffffff',
+              color: isDarkTheme ? '#ffffff' : '#000000'
             }}
           >
-            {isDarkTheme ? '☀️ Light' : '🌙 Dark'}
+            {isDarkTheme ? '🌙 Dark'  : '☀️ Light'}
           </button>
-
+          <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=deepak.24bcs10067@sst.scaler.com&su=Appointment-Support`} target="_blank">
           <button className="ml-4 bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition">
             Let’s Talk
           </button>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -77,11 +78,13 @@ function LightHeaderD() {
                 color: isDarkTheme ? '#000000' : '#ffffff'
               }}
             >
-              {isDarkTheme ? '☀️ Light' : '🌙 Dark'}
+              {isDarkTheme ? '🌙 Dark'  : '☀️ Light' }
             </button>
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=deepak.24bcs10067@sst.scaler.com&su=Appointment-Support`} target="_blank">
             <button className="bg-indigo-600 text-white w-full py-2 rounded-lg hover:bg-indigo-700 transition">
               Let’s Talk
             </button>
+            </a>
           </div>
         </div>
       )}
