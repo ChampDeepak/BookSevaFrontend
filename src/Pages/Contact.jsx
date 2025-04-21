@@ -1,7 +1,45 @@
+import { useState } from "react";
 import { useTheme } from "../Context/ThemeContext";
 
 function Contact() {
   const { isDarkTheme } = useTheme();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      console.log('Form submitted:', formData);
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+      
+      // Reset status after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+    }, 1500);
+  };
 
   return (
     <section 
@@ -24,7 +62,8 @@ function Contact() {
       </div>
 
       {/* Contact Card */}
-      <div className="container px-4 sm:px-6 py-16 mx-auto flex items-center justify-center min-h-[80vh]">
+      <div className="container px-4 sm:px-6 py-16 mx-auto flex flex-col lg:flex-row items-center justify-center min-h-[80vh] gap-8">
+        {/* Contact Information */}
         <div 
           className="lg:w-1/3 md:w-1/2 rounded-lg p-6 sm:p-8 flex flex-col relative z-10 shadow-lg"
           style={{
@@ -39,7 +78,6 @@ function Contact() {
             Contact Information
           </h2>
 
-          {/* Contact Items */}
           <div className="space-y-6">
             {[
               {
@@ -101,6 +139,145 @@ function Contact() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Contact Form */}
+        <div 
+          className="lg:w-1/3 md:w-1/2 rounded-lg p-6 sm:p-8 flex flex-col relative z-10 shadow-lg"
+          style={{
+            backgroundColor: 'var(--card-bg)',
+            border: '1px solid var(--nav-bg)'
+          }}
+        >
+          <h2 
+            className="text-xl font-bold mb-6"
+            style={{ color: 'var(--body_clr)' }}
+          >
+            Send Us a Message
+          </h2>
+          
+          {submitStatus === 'success' ? (
+            <div 
+              className="p-4 mb-6 rounded-lg"
+              style={{
+                backgroundColor: 'rgba(74, 222, 128, 0.1)',
+                border: '1px solid rgba(74, 222, 128, 0.3)',
+                color: 'var(--body_clr)'
+              }}
+            >
+              Thank you! Your message has been sent successfully.
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label 
+                  htmlFor="name"
+                  className="block mb-1 text-sm"
+                  style={{ color: 'var(--body_clr)' }}
+                >
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 rounded-lg border text-sm"
+                  style={{
+                    backgroundColor: 'var(--card-bg)',
+                    borderColor: 'var(--nav-bg)',
+                    color: 'var(--body_clr)'
+                  }}
+                />
+              </div>
+              
+              <div>
+                <label 
+                  htmlFor="email"
+                  className="block mb-1 text-sm"
+                  style={{ color: 'var(--body_clr)' }}
+                >
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 rounded-lg border text-sm"
+                  style={{
+                    backgroundColor: 'var(--card-bg)',
+                    borderColor: 'var(--nav-bg)',
+                    color: 'var(--body_clr)'
+                  }}
+                />
+              </div>
+              
+              <div>
+                <label 
+                  htmlFor="phone"
+                  className="block mb-1 text-sm"
+                  style={{ color: 'var(--body_clr)' }}
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 rounded-lg border text-sm"
+                  style={{
+                    backgroundColor: 'var(--card-bg)',
+                    borderColor: 'var(--nav-bg)',
+                    color: 'var(--body_clr)'
+                  }}
+                />
+              </div>
+              
+              <div>
+                <label 
+                  htmlFor="message"
+                  className="block mb-1 text-sm"
+                  style={{ color: 'var(--body_clr)' }}
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="4"
+                  className="w-full px-4 py-2 rounded-lg border text-sm"
+                  style={{
+                    backgroundColor: 'var(--card-bg)',
+                    borderColor: 'var(--nav-bg)',
+                    color: 'var(--body_clr)'
+                  }}
+                ></textarea>
+              </div>
+              
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full py-3 px-6 rounded-lg font-medium transition-colors duration-300 mt-4"
+                style={{
+                  backgroundColor: 'var(--link_clr)',
+                  color: 'var(--body_bg)',
+                  opacity: isSubmitting ? 0.7 : 1
+                }}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>
